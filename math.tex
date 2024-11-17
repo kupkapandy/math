@@ -28,10 +28,11 @@ $$\tg\theta=\frac{a}{b}$$
 $$\ctg\theta=\frac{b}{a}$$
 \begin{center}
 \begin{tikzpicture}
-  \draw (0,0) coordinate[label=below:$A$] (a) --
-        (4,0) coordinate[label=below:$C$] (c) --
-        (4,4) coordinate[label=above:$B$] (b) -- cycle;
-      \pic[draw, fill=teal!30, angle radius=7mm, "$\theta$", angle eccentricity=1.5] {angle = c--a--b};
+  \draw (0,0) coordinate[label=below:$C$] (c) --
+        (4,0) coordinate[label=below:$B$] (b) node[midway, below] {$b$} --
+        (4,4) coordinate[label=above:$A$] (a) node[midway, right] {$a$} --
+        cycle node[midway, left=0.075cm] {$c$};
+      \pic[draw, fill=teal!30, angle radius=7mm, "$\theta$", angle eccentricity=1.5] {angle = b--c--a};
 \end{tikzpicture}
 \end{center}
 Funkcje trygonometryczne również posiadają tożsamości trygonometryczne takie jak np.
@@ -192,8 +193,56 @@ $$\overrightarrow{u} \cdot \overrightarrow{w} = |\overrightarrow{u}| \cdot |\ove
     (3,1)
   }
   node[pos=0.9, above left, black]{$[5,0]$};
-  \draw[black] (-1,1) arc (0:33:1);
-  \node[black] at (-0.90,1.32) {$\theta$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\subsection{Przesunięcie równoległe wzdłuż osi OX i OY}
+Przesunięcie wykresu funkcji najłatwiej jest zapisywać w postaci wektora przesunięcia:
+$$\overrightarrow{u} = [1,5]$$
+$$\overrightarrow{w} = [-2,-4]$$
+Wektor $\overrightarrow{u} = [1,5]$ oznacza przesunięcie wykresu funkcji o 1 jednostke w prawą stronę
+i 5 jednostki do góry, natomiast wektor $\overrightarrow{w} = [-2,-4]$
+oznacza przesunięcie o jednostek 2 do lewej i 4 jednostki w dół. Na wykresie poniżej zostało przedstawione przesunięcie funkcji o
+wektor $\overrightarrow{u} = [1,5]$.
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[xmin=-3.5,xmax=3.5,ymin=-0.5,ymax=11.5,axis lines=middle,
+            xtick={-4,-3,...,4},ytick={0,5,10}, xlabel=$x$, ylabel=$y$,
+            ]
+    \addplot[domain=-3.5:3.5, samples=250, dashed, black] {x^2};
+    \node[anchor=west, black] at (axis cs:-2.6,8) {$y = x^2$};
+    \addplot[domain=-3.5:3.5, samples=250, ultra thick, red] {(x-1)^2 + 5};
+    \node[anchor=west, black] at (axis cs:0,8) {$y = (x-1)^2 + 3$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+Ogólny wzór przesunięcia funkcji o wektor $\overrightarrow{v} = [p, q]$ to:
+$$g(x) = f\left(x - p\right) + q$$
+\newpage
+\subsection{Przekształcenie symetralne względem osi OX i OY}
+Jeżeli wykres funkcji $y=f(x)$ odbijem symetrycznie względem osi $OX$, otrzymamy wykres funkcji $$y=-f(x)$$
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[xmin=-0.5,xmax=6.5,ymin=-3.5,ymax=3.5,axis lines=middle,
+            xtick={-10,...,10},ytick={-6,...,10}, xlabel=$x$, ylabel=$y$,
+            ]
+    \addplot[domain=0:6.5, samples=250, ultra thick, red] {sqrt(x)};
+    \node[anchor=west, black] at (axis cs:2.6,2.5) {$y = \sqrt{x}$};
+    \addplot[domain=0:6.5, samples=250, ultra thick, blue] {-sqrt(x)};
+    \node[anchor=west, black] at (axis cs:2.6,-2.5) {$y = -\sqrt{x}$};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+Jeżeli wykres funkcji $y=f(x)$ odbijem symetrycznie względem osi $OY$, otrzymamy wykres funkcji $$y=f(-x)$$
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[xmin=-3.5,xmax=3.5,ymin=-3.5,ymax=3.5,axis lines=middle,
+            xtick={-10,...,10},ytick={-6,...,10}, xlabel=$x$, ylabel=$y$,
+            ]
+    \addplot[domain=-3:3, samples=250, ultra thick, red] {(x-1)^2};
+    \node[anchor=west, black] at (axis cs:1,-1) {$y = \left(x-1\right)^2$};
+    \addplot[domain=-3:3, samples=250, ultra thick, blue] {(-x-1)^2};
+    \node[anchor=west, black] at (axis cs:-3.5,-1) {$y = \left(-x-1\right)^2$};
 \end{axis}
 \end{tikzpicture}
 \end{center}
