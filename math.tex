@@ -20,6 +20,79 @@
 \newpage
 \section{Wprowadzenie do Rachunku Różniczkowego}
 \subsection{Algebra}
+\subsubsection{Wartość Bezwzględna}
+Dla liczby x, wartość bezwzględna oznacza:
+$$
+|x| =
+\begin{cases} 
+  x & \text{jeśli } x \geq 0, \\
+  -x & \text{jeśli } x < 0.
+\end{cases}
+$$
+Dla $2$ liczb możemy wyznaczyć odległość pomiędzy nimi na osi liczbowej. Odległość jest zawsze liczbą dodatnią.
+Aby obliczyć odległość pomiędzy a i b możemy skorzystać z następójących wzorów:
+$$\left|a-b\right|$$
+$$\left|b-a\right|$$
+Aby obliczyć punkt równoległy od punktu $a$ i $b$ można wykorzystać następujący wzór:
+$$p = \frac{a+b}{2}$$
+\subsubsection{Równania z wartością bezwzględną}
+Równanie z wartością bezwględną takie jak np. $\left|x-2\right|=5$ można rozwiązać na 3 sposoby:
+\begin{itemize}
+  \item Sposób algebraiczny jest jednym z najczęściej używanych sposobów do obliczania wartości bezwzględnej
+      $$\left|x-2\right|=5$$
+      $$x-2=5 \vee x-2=-5$$
+      $$x=7\vee x=-3$$
+\newpage
+  \item Sposób geometryczny opiera się na graficznym przedstawieniu równania
+    \begin{center}
+      \begin{tikzpicture}
+        \draw[thick, ->] (-4, 0) -- (8, 0);
+
+        \foreach \x in {-3, 2, 7} {
+          \draw (\x, 0.1) -- (\x, -0.1);
+          \node[below] at (\x, -0.1) {\x};
+        }
+        \draw [decorate,decoration={brace,amplitude=10pt}] (-3,0) -- (2,0) node[midway,yshift=17pt] {5};
+        \draw [decorate,decoration={brace,amplitude=10pt}] (2,0) -- (7,0) node[midway,yshift=17pt] {5};
+        \node at (0, -0.5) {};
+        \node at (0, 0.5) {};
+      \end{tikzpicture}
+    \end{center}
+  \item Istnieje również sposób funkcyjny, który polega na narysowaniu funkcji po
+        obu stronach równania i sprawdzeniu, dla jakich wartości zmiennych wyniki są
+        równe. Ze względu na to, że ten sposób jest bardziej żmudny, a dwa wcześniejsze
+        podejścia są bardziej efektywne, nie zostanie on przedstawiony graficznie w tym miejscu.
+\end{itemize}
+Warto również pamiętać aby nie liczyć równań których wynik równania z wartością bezwględną jest liczba ujemna np.
+$$\left|x-2\right|\neq-5$$
+\subsubsection{Nierówności z wartością bezwzględną}
+\begin{itemize}
+  \item Sposób algebraiczny.
+      $$\left| x+2 \right| \leq 7$$
+      $$x+2 \leq 7 \wedge x+2\geq -7$$
+      $$x \leq 5 \wedge x \geq -9$$
+      $$x \in \langle -9,5 \rangle$$
+
+      $$\left| x-7 \right| > 2$$
+      $$x-7 > 2 \vee x-7 < -2$$
+      $$x > 9 \vee x < 5$$
+      $$x \in \left(-\infty, 5\right) \cup \left(9, +\infty \right)$$
+  %\item Sposób geometryczny opiera się na graficznym przedstawieniu równania
+  %  \begin{center}
+  %    \begin{tikzpicture}
+  %      \draw[thick, ->] (-4, 0) -- (8, 0);
+  %
+  %      \foreach \x in {-3, 2, 7} {
+  %        \draw (\x, 0.1) -- (\x, -0.1);
+  %        \node[below] at (\x, -0.1) {\x};
+  %      }
+  %      \draw [decorate,decoration={brace,amplitude=10pt}] (-3,0) -- (2,0) node[midway,yshift=17pt] {5};
+  %      \draw [decorate,decoration={brace,amplitude=10pt}] (2,0) -- (7,0) node[midway,yshift=17pt] {5};
+  %      \node at (0, -0.5) {};
+  %      \node at (0, 0.5) {};
+  %   \end{tikzpicture}
+  %  \end{center}
+\end{itemize}
 \subsection{Trygonometira}
 W $\triangle$ prostokątnym dany jest kąt $\theta$. Wyraża się 4 funkcje trygonometryczne:
 $$\sin\theta=\frac{a}{c}$$
