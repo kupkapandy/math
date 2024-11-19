@@ -24,11 +24,17 @@
 Dla liczby x, wartość bezwzględna oznacza:
 $$
 |x| =
-\begin{cases} 
+\begin{cases}
   x & \text{jeśli } x \geq 0, \\
   -x & \text{jeśli } x < 0.
 \end{cases}
 $$
+Wartości bezwzględne posiadają również własne własności:
+$$\sqrt{a^2} = \left|a\right|$$
+$$\left|a\right|^2 = a^2$$
+$$\left|a \cdot b\right| = \left| a \right| \cdot \left| b \right|$$
+$$\left|\frac{a}{b}\right| = \frac{\left|a\right|}{\left|b\right|}$$
+$$\left|a\right|=\left|b\right| \Longleftrightarrow a=b \wedge a = -b$$
 Dla $2$ liczb możemy wyznaczyć odległość pomiędzy nimi na osi liczbowej. Odległość jest zawsze liczbą dodatnią.
 Aby obliczyć odległość pomiędzy a i b możemy skorzystać z następójących wzorów:
 $$\left|a-b\right|$$
@@ -65,9 +71,25 @@ Równanie z wartością bezwględną takie jak np. $\left|x-2\right|=5$ można r
 \end{itemize}
 Warto również pamiętać aby nie liczyć równań których wynik równania z wartością bezwględną jest liczba ujemna np.
 $$\left|x-2\right|\neq-5$$
+\subsubsection{Równania z zagnieżdzoną wartością bezwględną}
+Jest też typ równań który posiada wartość bezwględną w wartości bezwzględnej,
+wtedy takie równanie trzeba rozbić na 2 mniejsze opuszczając przy tym
+wartość bezwględną, np. $\left|\left|x+2\right|-6\right| = 1$
+$$\left|\left|x+2\right|-6\right|=1$$
+Trzeba rozdzielić w tym momencie to równanie na 2 mniejsze, usuwając pierwszą wartość bezwględną.
+$$\left|x+2\right|-6=1 \vee \left|x+2\right|-6=-1$$
+Po skróceniu równania wygląda ono tak:
+$$\left|x+2\right|=7 \vee \left|x+2\right|=5$$
+Potem każde z nich znowu rozdzielamy na 2 mniejsze i uzyskujemy 4 równania.
+$$x+2=7 \vee x+2=-7 \vee x+2=5 \vee x+2=-5$$
+Po skróceniu ich otrzymujemy wynik:
+$$x \in \left\{ -9, -7, 3, 5\right\}$$
+
+
 \subsubsection{Nierówności z wartością bezwzględną}
 \begin{itemize}
-  \item Sposób algebraiczny.
+  \item Sposób algebraiczny dla równania $\left|x + 2\right| \leq 7$. Dla znaków $<$ i $\leq$ rozdzielone równanie będzie
+    koniunkcją $\wedge$ (i), natomiast dla $>$ i $\geq$ równania będą alternatywą $\vee$ (lub).
       $$\left| x+2 \right| \leq 7$$
       $$x+2 \leq 7 \wedge x+2\geq -7$$
       $$x \leq 5 \wedge x \geq -9$$
@@ -77,22 +99,28 @@ $$\left|x-2\right|\neq-5$$
       $$x-7 > 2 \vee x-7 < -2$$
       $$x > 9 \vee x < 5$$
       $$x \in \left(-\infty, 5\right) \cup \left(9, +\infty \right)$$
-  %\item Sposób geometryczny opiera się na graficznym przedstawieniu równania
-  %  \begin{center}
-  %    \begin{tikzpicture}
-  %      \draw[thick, ->] (-4, 0) -- (8, 0);
-  %
-  %      \foreach \x in {-3, 2, 7} {
-  %        \draw (\x, 0.1) -- (\x, -0.1);
-  %        \node[below] at (\x, -0.1) {\x};
-  %      }
-  %      \draw [decorate,decoration={brace,amplitude=10pt}] (-3,0) -- (2,0) node[midway,yshift=17pt] {5};
-  %      \draw [decorate,decoration={brace,amplitude=10pt}] (2,0) -- (7,0) node[midway,yshift=17pt] {5};
-  %      \node at (0, -0.5) {};
-  %      \node at (0, 0.5) {};
-  %   \end{tikzpicture}
-  %  \end{center}
+\newpage
+  \item Sposób geometryczny dla równania $\left|x + 2\right| \leq 7$
+    \begin{center}
+      \begin{tikzpicture}
+        \draw[thick, ->] (-4, 0) -- (8, 0);
+        \foreach \x in {-3, 2, 7} {
+          \draw (\x, 0.1) -- (\x, -0.1);
+          \node[below] at (\x, -0.1) {\x};
+        }
+        \draw [decorate,decoration={brace,amplitude=10pt}] (-3,0) -- (2,0) node[midway,yshift=17pt] {5};
+        \draw [decorate,decoration={brace,amplitude=10pt}] (2,0) -- (7,0) node[midway,yshift=17pt] {5};
+        \node at (0, -0.5) {};
+        \node at (0, 0.5) {};
+     \end{tikzpicture}
+    \end{center}
 \end{itemize}
+Ten sposób polega na analizie graficznego przedstawienia wartości bezwzględnej. Analizując grafike można zauważyć, że przedział to:
+$$x \in \langle-9, 5\rangle$$
+Przykładowe nierówności dla poszczególnych wyników:
+$$\left|x\right|\geq0 \quad x \in \mathbb{R}$$
+$$\left|x\right|<0 \quad x \in \varnothing$$
+$$\left|x - y\right|\leq0 \quad x \in \left\{y\right\}$$
 \subsection{Trygonometira}
 W $\triangle$ prostokątnym dany jest kąt $\theta$. Wyraża się 4 funkcje trygonometryczne:
 $$\sin\theta=\frac{a}{c}$$
@@ -243,7 +271,6 @@ $$ a \cdot \overrightarrow{w} = [a \cdot w_x, a \cdot w_y], \quad \text{gdzie } 
 Wektory $\overrightarrow{u} = [u_x, u_y]$ i $\overrightarrow{w} = [w_x, w_y]$, są przeciwne wtedy,
 gdy suma wektorów $\overrightarrow{u}$ i $\overrightarrow{w}$ jest wektorem zerowym, czyli:
 $$\overrightarrow{u} = -\overrightarrow{w} \Longleftrightarrow u_x + w_x = 0 \wedge u_y + w_y = 0$$
-\newline
 Iloczyn skalarny wektorów $\overrightarrow{u} = [u_1,u_2]$ i $\overrightarrow{w} = [w_1,w_2]$ to liczba, którą można uzyskać
 dodając iloczyny odpowiednich współrzędnych:
 $$\overrightarrow{u} \cdot \overrightarrow{w} = u_1 \cdot w_1 + u_2 \cdot w_2$$
