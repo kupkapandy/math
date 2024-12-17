@@ -213,6 +213,48 @@ oraz o zamianie znaków (np. z $>$ do $<$) oraz zmiane liczby na przeciwną.
 %\vspace{-3.5em}
 %$$x \in \left\langle-9,5\right\rangle$$
 
+\subsection{Funkcja Kwadratowa}
+
+\subsubsection*{Postać kanoniczna}
+Funkcja kwadratowa w postaci kanonicznej to taka która ma wzór:
+$$y = a(x - p)^2 + q$$
+gdzie: $a \neq 0$ oraz $[p, q]$ to przesunięcie równoległe wykresu.
+
+\subsubsection*{Postać ogólna}
+Funkcja kwadratowa w postaci ogólnej to taka która ma wzór:
+$$y = ax^2 + bx + c$$
+gdzie: $a \neq 0$ oraz $a, b, c \in \mathbb{R}$. Przykładowa funkcja kwadratowa została przedstawiona
+poniżej, wzór jej to: $y = 2x^2 + 3x + 2$
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[xmin=-4.5,xmax=4.5,ymin=-0.5,ymax=4.5,axis lines=middle,
+            xtick={-4,-3,...,4},ytick={-4,-3,...,4}, xlabel=$x$, ylabel=$y$,
+            ]
+  \addplot[domain=-4:4, samples=250, ultra thick,blue, ->]{2 * x^2 + 3 * x + 2};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+\subsubsection*{Podstawowy opis i własności funkcji}
+Wyróżnik $\Delta$ (delta) trójmianu kwadratowego: $ax^2 + bx + c$ to:
+$$\Delta = b^2 - 4ac$$
+Dzięki wyróznikowi $(\Delta)$ można wyznaczyć miejsca zerowe. Ilośc miejsc zerowych zależy od delty.
+Jeżeli $\Delta > 0$ to funkcja posiada 2 miejsca zerowe:
+$$x_0 = \frac{-b - \sqrt{\Delta}}{2a}\quad\vee\quad x_0=\frac{-b + \sqrt{\Delta}}{2a}$$
+Natomiast jeżeli $\Delta = 0$ to funkcja posiada jedno miejsce zerowe:
+$$x_0 = \frac{-b}{2a}$$
+Dla $\Delta < 0$ funkcja nie przyjmuje miejsc zerowych (Brak rozwiązania). \\
+Parabola funkcji kwadratowej posiada wierzchołek w punkcie $W=(p, q)$, gdzie:
+$$p = \frac{-b}{2a}$$
+$$q = \frac{-\Delta}{4a}\quad\vee\quad q = f(p)$$
+Ramiona paraboli skierowane są:
+$$\text{W góre dla: } a > 0$$
+$$\text{W dół dla: } a < 0$$
+Oś symetri paraboli to: $x = p$ \\
+Punkt przecięcia z OY, posiada współrzędne $\left(0, c\right)$
+\subsubsection*{Postać iloczynowa}
+Funkcja kwadratowa w postaci iloczynowej istnieje jeżeli $\Delta \geq 0$ i posiada wzór:
+$$y = a\left(x - x_1\right)\left(x - x_2\right)$$
+gdzie: $x_1$ i $x_2$ to miejsca zerowe funkcji kwadratowej.
 
 \subsection{Trygonometria}
 W $\triangle$ prostokątnym dany jest kąt $\theta$. Wyraża się 4 funkcje trygonometryczne:
