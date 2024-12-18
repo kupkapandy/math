@@ -45,7 +45,7 @@ Aby obliczyć punkt równoległy od punktu $a$ i $b$ można wykorzystać następ
 $$p = \frac{a+b}{2}$$
 
 
-\subsubsection{Równania z wartością bezwzględną}
+\subsubsection*{Równania z wartością bezwzględną}
 Równanie z wartością bezwględną takie jak np. $\left|x-2\right|=5$ można rozwiązać na 3 sposoby:
 \begin{itemize}
   \item Sposób algebraiczny jest jednym z najczęściej używanych sposobów do obliczania wartości bezwzględnej
@@ -76,7 +76,7 @@ Warto również pamiętać aby nie liczyć równań których wynik równania z w
 $$\left|x-2\right|\neq-5$$
 
 
-\subsubsection{Równania z zagnieżdzoną wartością bezwględną}
+\subsubsection*{Równania z zagnieżdzoną wartością bezwględną}
 Jest też typ równań który posiada wartość bezwględną w wartości bezwzględnej,
 wtedy takie równanie trzeba rozbić na 2 mniejsze opuszczając przy tym
 wartość bezwględną, np. $\left|\left|x+2\right|-6\right| = 1$
@@ -90,7 +90,7 @@ x+2=7 \vee x+2=-7 \hspace{1em} & \vee \hspace{1em} x+2=5 \vee x+2=-5
 $$x \in \left\{ -9, -7, 3, 5\right\}$$
 
 
-\subsubsection{Równania z wartością bezwględną i x}
+\subsubsection*{Równania z wartością bezwględną i x}
 Jeśli mamy równanie np. $\left|x-6\right|=3x+2$ musimy rozpatrzyć 2 przypadki:
 $$x \in \left( -\infty , 6\right) \quad \cup \quad x \in \left\langle 6, +\infty \right)$$
 Skąd to wiemy? Jeżeli nie mamy pewności tworzymy oś liczbową i zaznaczamy dla niej $x$ który spełnia równanie: $x - y = 0$.
@@ -148,7 +148,7 @@ x = 1 \quad & \vee \quad x = -4 \notin \left\langle6, +\infty\right)
 \end{align*}
 
 
-\subsubsection{Nierówności z wartością bezwzględną}
+\subsubsection*{Nierówności z wartością bezwzględną}
 \begin{itemize}
   \item Sposób algebraiczny dla równania $\left|x + 2\right| \leq 7$. Dla znaków $<$ i $\leq$ rozdzielone równanie będzie
     koniunkcją $\wedge$ (i), natomiast dla $>$ i $\geq$ równania będą alternatywą $\vee$ (lub).
@@ -184,36 +184,12 @@ $$\left|x\right|<0 \quad x \in \varnothing$$
 $$\left|x - y\right|\leq0 \quad x \in \left\{y\right\}$$
 
 
-\subsubsection{Nierówności z zagnieżdzoną wartością bezwzględną}
+\subsubsection*{Nierówności z zagnieżdzoną wartością bezwzględną}
 Nierówności z zagnieszczoną wartością bezwzględną np. $$\left|\left|x+2\right|-4\right|<10$$ działają na tej samej zasadzie co
 zwykłe nierówności tylko, że rozbite na jeszcze drugą część. Dalej trzeba pamiętąc o znakach $\wedge$ i $\vee$, czyli koniunkcji i alternatywie
 oraz o zamianie znaków (np. z $>$ do $<$) oraz zmiane liczby na przeciwną.
 
-% wydaje sie byc strasznie bez sensu patrzac, ze nie ma to jak skrocic
-%\subsubsection{Podsumowanie}
-%Obliczanie równania z jedną wartością bezwzględną dla $\left|x-2\right|=5$. Polega na rozważeniu 2 przypadków po opuszczeniu wartości bezwględnej.
-%Równanie zwykłe bez wartości bezwględnej i równanie z liczbą przeciwną.
-%\begin{align*}
-%x-2=5 \quad & \vee \quad x-2=-5 \\
-%x=7 \quad & \vee \quad x=-3
-%\end{align*}
-%Obliczanie równania z zagnieżdzoną wartością bezwględną dla równania: $\left|\left|x+2\right|-6\right|=1$. Nierówność
-%rozdziela się na 4 mniejsze części które się oblicza. Pamiętać trzeba o znaku logicznym i zamianie liczb na przeciwne.
-%\begin{align*}
-%\left|x+2\right|-6=1 \quad & \vee \quad \left|x+2\right|-6=-1 \\
-%\left|x+2\right|=7 \quad & \vee \quad \left|x+2\right|=5 \\
-%x+2=7 \vee x+2=-7 \hspace{1em} & \vee \hspace{1em} x+2=5 \vee x+2=-5
-%\end{align*}
-%$$x \in \left\{ -9, -7, 3, 5\right\}$$
-%Obliczanie nierówności z jedną wartością bezwględną dla $\left|x+2\right|\leq7$. Obliczanie jest takie same jak
-%\begin{align*}
-%x+2\leq7 \quad & \wedge \quad x+2\geq-7 \\
-%x\leq5 \quad & \wedge \quad x\geq-9 \\
-%\end{align*}
-%\vspace{-3.5em}
-%$$x \in \left\langle-9,5\right\rangle$$
-
-\subsection{Funkcja Kwadratowa}
+\subsubsection{Funkcja Kwadratowa}
 
 \subsubsection*{Postać kanoniczna}
 Funkcja kwadratowa w postaci kanonicznej to taka która ma wzór:
@@ -480,4 +456,23 @@ Jeżeli wykres funkcji $y=f(x)$ odbijem symetrycznie względem osi $OY$, otrzyma
 \end{axis}
 \end{tikzpicture}
 \end{center}
+
+\section{Dowody matematyczne}
+\textbf{Przypuszczenie 1.} Załóżmy, że $n \in \mathbb{Z}$, $n > 1$ i do tego nie jest liczbą pierwszą.
+Wtedy $2^n - 1$ nie jest liczbą pierwszą.
+\vspace{1em}
+
+\noindent \textbf{Udowodnienie przypuszczenia 1.} Ponieważ $n$ nie jest liczbą pierwszą, istnieją liczby całkowite
+dodatnie $a$ i $b$ takie, że $a < n, b < n$, i $n = ab$. Niech $x = 2^b - 1$ i $y = 1 + 2^b + 2^{2b} + \dots + 2^{\left(a-1\right)b}$.
+Więc
+\begin{align*}
+  xy &= \left(2^b -1\right) \cdot \left(1 + 2^b + 2^{2b} + \dots + 2^{\left(a - 1\right)b}\right) \\
+     &= 2^b \cdot \left(1 + 2^b + 2^{2b} + \dots + 2^{\left(a-1\right)b}\right) - \left(1 + 2^b + 2^{2b} + \dots + 2^{\left(a-1\right)b}\right) \\
+     &= \left(2^b + 2^{2b} + 2^{3b} + \dots + 2^{ab}\right) - \left(1 + 2^b + 2^{2b} + \dots + 2^{\left(a - 1\right)b}\right) \\
+     &= 2^{ab} - 1 \\
+     &= 2^n - 1.
+\end{align*}
+Ponieważ $b < n$, możemy stwierdzić, że $x = 2^b - 1 < 2^n - 1$. Dodatkowo, ponieważ $ab = n > a$, wynik stąd, że $b > 1$.
+Zatem, $x = 2^b - 1 > 2^1 -1 = 1$, czyli $y < xy = 2^n - 1$. Zatem, udowodniliśmy, że $2^n - 1$ można zapisać jak iloczyn
+dwóch liczb dodatnich całkowitych $x$ i $y$, obie liczby są mniejsze niż $2^n - 1$, czyli $2^n - 1$ nie jest liczbą pierwszą. \hfill $\square$
 \end{document}
