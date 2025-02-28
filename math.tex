@@ -33,27 +33,27 @@ $$
 \end{cases}
 $$
 Wartości bezwzględne posiadają również własne własności:
+
 $$\sqrt{a^2} = \left|a\right|$$
 $$\left|a\right|^2 = a^2$$
 $$\left|a \cdot b\right| = \left| a \right| \cdot \left| b \right|$$
 $$\left|\frac{a}{b}\right| = \frac{\left|a\right|}{\left|b\right|}$$
 $$\left|a\right|=\left|b\right| \Longleftrightarrow a=b \wedge a = -b$$
-Dla $2$ liczb możemy wyznaczyć odległość pomiędzy nimi na osi liczbowej. Odległość jest zawsze liczbą dodatnią.
-Aby obliczyć odległość pomiędzy a i b możemy skorzystać z następójących wzorów:
+Obliczanie odległości dla dwóch liczb na osi liczbowej:
 $$\left|a-b\right|$$
 $$\left|b-a\right|$$
-Aby obliczyć punkt równoległy od punktu $a$ i $b$ można wykorzystać następujący wzór:
+Obliczanie punkty równoległego dla punktów $a$ i $b$:
 $$p = \frac{a+b}{2}$$
 
 
 \subsubsection*{Równania z wartością bezwzględną}
 Równanie z wartością bezwględną takie jak np. $\left|x-2\right|=5$ można rozwiązać na 3 sposoby:
 \begin{itemize}
-  \item Sposób algebraiczny jest jednym z najczęściej używanych sposobów do obliczania wartości bezwzględnej
+  \item Sposób algebraiczny:
       $$\left|x-2\right|=5$$
       $$x-2=5 \vee x-2=-5$$
       $$x=7\vee x=-3$$
-  \item Sposób geometryczny opiera się na graficznym przedstawieniu równania
+    \item Sposób geometryczny:
     \begin{center}
       \begin{tikzpicture}
         \draw[thick, ->] (-4, 0) -- (8, 0);
@@ -68,21 +68,13 @@ Równanie z wartością bezwględną takie jak np. $\left|x-2\right|=5$ można r
         \node at (0, 0.5) {};
       \end{tikzpicture}
     \end{center}
-  \item Istnieje również sposób funkcyjny, który polega na narysowaniu funkcji po
-        obu stronach równania i sprawdzeniu, dla jakich wartości zmiennych wyniki są
-        równe. Ze względu na to, że ten sposób jest bardziej żmudny, a dwa wcześniejsze
-        podejścia są bardziej efektywne, nie zostanie on przedstawiony graficznie w tym miejscu.
 \end{itemize}
-Warto również pamiętać aby nie liczyć równań których wynik równania z wartością bezwględną jest liczba ujemna np.
+Warto pamiętać aby \textbf{nie liczyć} równań z wartością bezwzględną gdzie wynik jest ujemny, np.
 $$\left|x-2\right|\neq-5$$
 
-
 \subsubsection*{Równania z zagnieżdzoną wartością bezwględną}
-Jest też typ równań który posiada wartość bezwględną w wartości bezwzględnej,
-wtedy takie równanie trzeba rozbić na 2 mniejsze opuszczając przy tym
-wartość bezwględną, np. $\left|\left|x+2\right|-6\right| = 1$
+Równanie trzeba rozbić na 2 mniejsze opuszczając przy tym wartość bezwglę\-dną, np.
 $$\left|\left|x+2\right|-6\right|=1$$
-Trzeba rozdzielić w tym momencie to równanie na 2 mniejsze, usuwając pierwszą wartość bezwględną.
 \begin{align*}
 \left|x+2\right|-6=1 \quad & \vee \quad \left|x+2\right|-6=-1 \\
 \left|x+2\right|=7 \quad & \vee \quad \left|x+2\right|=5 \\
@@ -92,10 +84,9 @@ $$x \in \left\{ -9, -7, 3, 5\right\}$$
 
 
 \subsubsection*{Równania z wartością bezwględną i x}
-Jeśli mamy równanie np. $\left|x-6\right|=3x+2$ musimy rozpatrzyć 2 przypadki:
+Dla przykładowego równania $\left|x-6\right|=3x+2$ trzeba rozpatrzyć 2 przypadki:
 $$x \in \left( -\infty , 6\right) \quad \cup \quad x \in \left\langle 6, +\infty \right)$$
-Skąd to wiemy? Jeżeli nie mamy pewności tworzymy oś liczbową i zaznaczamy dla niej $x$ który spełnia równanie: $x - y = 0$.
-Wybieramy losową liczbe dodatnią np. 20. Jeśli liczba będzie większa liczby wieksze idą w prawą strone, a na odwrót w lewo.
+Użyteczna jest oś liczbowa aby wyznaczyć 2 przypadki.
     \begin{center}
       \begin{tikzpicture}
         \draw[thick, ->] (-4, 0) -- (4, 0);
@@ -115,32 +106,7 @@ Wybieramy losową liczbe dodatnią np. 20. Jeśli liczba będzie większa liczby
         \node at (0, 0.5) {};
      \end{tikzpicture}
     \end{center}
-Drugi przypadek aby lepiej zwizuwalizować: $\left|6-x\right|=3x+2$. Biorąc w tym momencie "przykładowe" $20$ otrzymujemy liczbe mniejszą od początkowej.
-    \begin{center}
-      \begin{tikzpicture}
-        \draw[thick, ->] (-4, 0) -- (4, 0);
-        \foreach \x in {1, 2, 3} {
-          \draw (\x, 0.1) -- (\x, -0.1);
-          \node[below] at (\x, -0.1) {-};
-        }
-        \foreach \x in {-3, -2, -1} {
-          \draw (\x, 0.1) -- (\x, -0.1);
-          \node[below] at (\x, -0.1) {+};
-        }
-        \draw(0, 0.1) -- (0, -0.1);
-        \node[below] at (0, -0.1) {6};
-        \draw [decorate,decoration={brace,amplitude=10pt}] (-3,0) -- (0,0) node[midway,yshift=17pt] {+};
-        \draw [decorate,decoration={brace,amplitude=10pt}] (0,0) -- (3,0) node[midway,yshift=17pt] {-};
-        \node at (0, -0.5) {};
-        \node at (0, 0.5) {};
-     \end{tikzpicture}
-    \end{center}
-Ważna uwaga, jeżeli napoczątku zamienimy kolejność aby po lewej stronie stał $x$ (nie $-x$ bo wtedy jest to coś innego) zawsze otrzymamy opcje nr. 1.
-Na przykład:
-$$\left|6-x\right|=\left|x-6\right|$$
-Po tym jak ustaliliśmy przedziały równania, możemy obliczyć te 2 równania.
-Dla równania pierwotnego $\left|x-6\right|=3x+2$.
-Dla przedziału liczb mniejszych mnożymy przez $-1$, a dla większych zostawiamy.
+Dla przedziału liczb mniejszych wartość bezwględną mnożymy przez $-1$, a dla większych zostawiamy.
 \begin{align*}
 x \in \left( -\infty , 6\right) \quad & \cup \quad x \in \left\langle 6, +\infty \right) \\
 -x+6=3x+2 \quad & \vee \quad x-6=3x+2 \\
@@ -164,20 +130,19 @@ x = 1 \quad & \vee \quad x = -4 \notin \left\langle6, +\infty\right)
       $$x \in \left(-\infty, 5\right) \cup \left(9, +\infty \right)$$
   \item Sposób geometryczny dla równania $\left|x + 2\right| \leq 7$
     \begin{center}
-      \begin{tikzpicture}
-        \draw[thick, ->] (-4, 0) -- (8, 0);
-        \foreach \x in {-3, 2, 7} {
+      \begin{tikzpicture}[scale=0.7]
+        \draw[thick, ->] (-10, 0) -- (6, 0);
+        \foreach \x in {-9, -2, 5} {
           \draw (\x, 0.1) -- (\x, -0.1);
           \node[below] at (\x, -0.1) {\x};
         }
-        \draw [decorate,decoration={brace,amplitude=10pt}] (-3,0) -- (2,0) node[midway,yshift=17pt] {5};
-        \draw [decorate,decoration={brace,amplitude=10pt}] (2,0) -- (7,0) node[midway,yshift=17pt] {5};
+        \draw [decorate,decoration={brace,amplitude=10pt}] (-9,0) -- (-2,0) node[midway,yshift=17pt] {7};
+        \draw [decorate,decoration={brace,amplitude=10pt}] (-2,0) -- (5,0) node[midway,yshift=17pt] {7};
         \node at (0, -0.5) {};
         \node at (0, 0.5) {};
      \end{tikzpicture}
     \end{center}
 \end{itemize}
-Ten sposób polega na analizie graficznego przedstawienia wartości bezwzględnej. Analizując grafike można zauważyć, że przedział to:
 $$x \in \langle-9, 5\rangle$$
 Przykładowe nierówności dla poszczególnych wyników:
 $$\left|x\right|\geq0 \quad x \in \mathbb{R}$$
@@ -187,8 +152,7 @@ $$\left|x - y\right|\leq0 \quad x \in \left\{y\right\}$$
 
 \subsubsection*{Nierówności z zagnieżdzoną wartością bezwzględną}
 Nierówności z zagnieszczoną wartością bezwzględną np. $$\left|\left|x+2\right|-4\right|<10$$ działają na tej samej zasadzie co
-zwykłe nierówności tylko, że rozbite na jeszcze drugą część. Dalej trzeba pamiętąc o znakach $\wedge$ i $\vee$, czyli koniunkcji i alternatywie
-oraz o zamianie znaków (np. z $>$ do $<$) oraz zmiane liczby na przeciwną.
+zwykłe nierówności tylko, że rozbite na jeszcze drugą część. Dalej trzeba pamiętąc o znakach $\wedge$ i $\vee$, oraz zamiane liczby na przeciwną.
 
 \subsubsection{Funkcja Kwadratowa}
 
@@ -546,6 +510,6 @@ Więc
      &= 2^n - 1.
 \end{align*}
 Ponieważ $b < n$, możemy stwierdzić, że $x = 2^b - 1 < 2^n - 1$. Dodatkowo, ponieważ $ab = n > a$, wynik stąd, że $b > 1$.
-Zatem, $x = 2^b - 1 > 2^1 -1 = 1$, czyli $y < xy = 2^n - 1$. Zatem, udowodniliśmy, że $2^n - 1$ można zapisać jak iloczyn
+Zatem, $x = 2^b - 1 > 2^1 -1 = 1$, czyli $y < xy = 2^n - 1$. Zatem, udowodniliśmy, że $2^n - 1$ można zapisać jako iloczyn
 dwóch liczb dodatnich całkowitych $x$ i $y$, obie liczby są mniejsze niż $2^n - 1$, czyli $2^n - 1$ nie jest liczbą pierwszą. \hfill $\square$
 \end{document}
